@@ -11,11 +11,11 @@ const FeaturedCar = () => {
     return (
         <div className="container">
             <div className="row">
-                <h3 className="section-title text-center my-5 fw-bold">
-                    <span className="d-inline-block border-bottom border-danger border-2">
-                        FEATURED PRODUCTS
+                <h1 className="section-title text-center my-5 fw-bold">
+                    <span className="d-inline-block border-bottom border-primary border-2">
+                        FEATURED CARS
                     </span>
-                </h3>
+                </h1>
                 <div className="row row-cols-1 row-cols-md-3 g-4 mb-3">
                     {inStock.slice(0, 6).map((car) => (
                         <CarItem key={car._id} car={car}></CarItem>
@@ -24,7 +24,7 @@ const FeaturedCar = () => {
                 <div className="mb-5">
                     <h5 className="text-center">
                         <Link
-                            className="btn btn-danger fw-bold p-3"
+                            className="btn manage-all-btn fw-bold p-3"
                             to="/manageInventories"
                         >
                             MANAGE ALL CARS

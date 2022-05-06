@@ -1,3 +1,13 @@
 .section-title {
-    color: #db2d2e;
+    color: #3041ff;
+}
+
+.manage-all-btn {
+    background-image: linear-gradient(to right, #3041ff, #5a7df1);
+    color: white;
+}
+
+.manage-all-btn:hover {
+    color: white;
+    background-image: linear-gradient(to right, #5a7df1, #3041ff);
 }
