@@ -9,6 +9,7 @@ import auth from "../../../firebase.init";
 import Loading from "../../Loading/Loading";
 import useToken from "../../../hooks/useToken";
 import "./Register.css"
+import { ToastContainer } from "react-toastify";
 
 const Register = () => {
     const [terms, setTerms] = useState(false);
@@ -47,13 +48,13 @@ const Register = () => {
                             <h2 className="text-center">Register</h2>
                             <Form onSubmit={handleRegister}>
                                 <Form.Group className="mb-3" controlId="formBasicName">
-                                    <Form.Control type="text" placeholder="Enter Name" />
+                                    <Form.Control type="text" placeholder="Your Name" />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Control
                                         name="email"
                                         type="email"
-                                        placeholder="Enter email"
+                                        placeholder="Email Address"
                                         required
                                     />
                                 </Form.Group>
@@ -108,6 +109,8 @@ const Register = () => {
                         </div>
                     </div>
                 </div>
+                <ToastContainer />
+
             </div>
         </div>
     );
