@@ -9,7 +9,8 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import auth from "../../../firebase.init";
 import Loading from "../../Loading/Loading";
-import useToken from "../../../hooks/useToken";
+import useToken from '../../../hooks/useToken';
+
 import './Login.css'
 
 const Login = () => {
@@ -19,16 +20,16 @@ const Login = () => {
         useSignInWithEmailAndPassword(auth);
     const [user, loading] = useAuthState(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-    const [token] = useToken(user);
     const navigate = useNavigate();
+    const [token] = useToken(user);
+
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+    let from = location.state?.from?.pathname || "/";
 
     if (loading || sending) {
         return <Loading></Loading>;
     }
-
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
@@ -37,6 +38,7 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         await signInWithEmailAndPassword(email, password);
+
     };
 
     const resetPassword = async () => {

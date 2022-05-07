@@ -7,7 +7,7 @@ import Banner from "./Banner/Banner";
 import FeaturedCar from "./FeaturedCar/FeaturedCar";
 import LastSection from "./LastSection/LastSection";
 import OurService from "./OurService/OurService";
-
+import Articles from "./Articles/Articles";
 
 const Home = () => {
     const [user, loading] = useAuthState(auth);
@@ -18,6 +18,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <FeaturedCar></FeaturedCar>
+            <Articles></Articles>
             <OurService></OurService>
             <LastSection></LastSection>
         </div>

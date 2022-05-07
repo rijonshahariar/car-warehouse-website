@@ -178,7 +178,7 @@ const Update = () => {
                                     </Button>
                                 </Form>
                                 <div className="d-flex justify-content-center align-items-center">
-                                    <Link className="btn btn-danger" to="/manage">
+                                    <Link className="btn submitbtn" to="/manage">
                                         Manage Inventories
                                     </Link>
                                 </div>

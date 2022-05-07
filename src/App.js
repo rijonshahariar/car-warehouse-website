@@ -10,6 +10,7 @@ import Register from './pages/Login/Register/Register';
 import ManageInventories from './pages/ManageInventories/ManageInventories';
 import Update from './pages/Update/Update';
 import Footer from './pages/Footer/Footer';
+import MyCars from './pages/MyCars/MyCars';
 function App() {
   return (
     <>
@@ -29,6 +30,14 @@ function App() {
           element={
             <RequireAuth>
               <AddCar></AddCar>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/mycar"
+          element={
+            <RequireAuth>
+              <MyCars></MyCars>
             </RequireAuth>
           }
         ></Route>
