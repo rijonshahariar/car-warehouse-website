@@ -1,0 +1,11 @@
+.signoutbtn {
+    background-image: linear-gradient(to right, #539ac0, #3041ff);
+    border: none;
+    color: white;
+}
+
+.signoutbtn:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #7bd1ff, #4f5df8);
+
+}

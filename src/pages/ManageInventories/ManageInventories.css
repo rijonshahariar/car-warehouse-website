@@ -1,0 +1,11 @@
+.managebtn {
+    background-image: linear-gradient(to right, #3041ff, #5a7df1);
+    color: #fff;
+    font-weight: bold;
+}
+
+.managebtn:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #5a7df1, #3041ff);
+
+}

@@ -2,13 +2,10 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Button, Container, Form, Row } from "react-bootstrap";
 import auth from "../../firebase.init";
-import axios from "axios";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 
 const AddCar = () => {
     const [user] = useAuthState(auth);
-    const navigate = useNavigate();
 
     const handleAddCar = (e) => {
         e.preventDefault();
@@ -22,13 +19,20 @@ const AddCar = () => {
             img: e.target.image.value,
             sold: parseInt(e.target.sold.value),
         };
-        axios
-            .post("http://localhost:5000/cars", carObj)
-            .then((response) => {
-                toast("Successfully Added");
-            });
-        e.target.reset();
-    };
+        fetch('http://localhost:5000/cars', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(carObj)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('success', data);
+                toast('users added successfully!!!');
+                e.target.reset();
+            })
+    }
     return (
         <div>
             <Container>

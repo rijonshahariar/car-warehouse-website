@@ -4,10 +4,12 @@
 
 .manage-all-btn {
     background-image: linear-gradient(to right, #3041ff, #5a7df1);
+    border: none;
     color: white;
 }
 
 .manage-all-btn:hover {
     color: white;
+    border: none;
     background-image: linear-gradient(to right, #5a7df1, #3041ff);
 }

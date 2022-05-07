@@ -6,7 +6,7 @@ const CarItem = ({ car }) => {
     const navigate = useNavigate();
 
     const handleInventory = () => {
-        navigate(`/inventory/${car._id}`);
+        navigate(`/update/${car._id}`);
         localStorage.setItem(car._id, car.quantity);
         localStorage.setItem(`sold${car._id}`, parseInt(car.sold));
     };
@@ -41,7 +41,7 @@ const CarItem = ({ car }) => {
                 </h6>
                 <div className="card-footer border-0 p-0">
                     <button onClick={handleInventory} className="w-100 btn managebtn">
-                        MANAGE CAR
+                        STOCK UPDATE
                     </button>
                 </div>
             </div>

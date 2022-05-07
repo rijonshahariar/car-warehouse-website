@@ -25,9 +25,9 @@ const FeaturedCar = () => {
                     <h5 className="text-center">
                         <Link
                             className="btn manage-all-btn fw-bold p-3"
-                            to="/manageInventories"
+                            to="/manage"
                         >
-                            MANAGE ALL CARS
+                            MANAGE INVENTORIES
                         </Link>
                     </h5>
                 </div>

@@ -3,10 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home'
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-
+import RequireAuth from './pages/RequireAuth/RequireAuth'
 import AddCar from './pages/AddCar/AddCar';
 import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
+import ManageInventories from './pages/ManageInventories/ManageInventories';
+import Update from './pages/Update/Update';
+import Footer from './pages/Footer/Footer';
 function App() {
   return (
     <>
@@ -14,18 +17,36 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route
+          path="/update/:id"
+          element={
+            <RequireAuth>
+              <Update></Update>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
           path="/addcar"
           element={
-            <AddCar></AddCar>
+            <RequireAuth>
+              <AddCar></AddCar>
+            </RequireAuth>
           }
         ></Route>
 
+        <Route
+          path="/manage"
+          element={
+            <RequireAuth>
+              <ManageInventories></ManageInventories>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
 
 
       </Routes>
-
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
 
     </>

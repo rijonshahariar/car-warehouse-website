@@ -5,6 +5,8 @@ import auth from "../../firebase.init";
 import Loading from '../Loading/Loading'
 import Banner from "./Banner/Banner";
 import FeaturedCar from "./FeaturedCar/FeaturedCar";
+import LastSection from "./LastSection/LastSection";
+import OurService from "./OurService/OurService";
 
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <FeaturedCar></FeaturedCar>
+            <OurService></OurService>
+            <LastSection></LastSection>
         </div>
     );
 };

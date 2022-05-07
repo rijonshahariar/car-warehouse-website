@@ -1,0 +1,9 @@
+.car-name {
+    color: #3041ff;
+
+}
+
+.submitbtn {
+    background-image: linear-gradient(to right, #539ac0, #3041ff);
+    border: none;
+}
