@@ -46,7 +46,14 @@ const ManageInventories = () => {
             </div>
             <div className="d-flex flex-column">
                 {cars.map((car) => (
-                   
+                    <ManageInventory key={car._id} car={car}>
+                        <button
+                            onClick={() => handleDelete(car._id)}
+                            className="btn btn-light btn-outline-danger"
+                        >
+                            ❌
+                        </button>
+                    </ManageInventory>
                 ))}
             </div>
         </div>
