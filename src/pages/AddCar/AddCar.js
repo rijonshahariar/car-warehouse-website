@@ -28,8 +28,8 @@ const AddCar = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('success', data);
-                toast('users added successfully!!!');
+                console.log(data);
+                toast('Car Added Successfully!');
                 e.target.reset();
             })
     }

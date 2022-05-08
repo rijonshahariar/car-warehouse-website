@@ -34,7 +34,7 @@ const ManageInventories = () => {
                             </div>
                             <div className="col-md-4 text-end">
                                 <button
-                                    onClick={() => navigate("/add-item")}
+                                    onClick={() => navigate("/addcar")}
                                     className="btn managebtn mt-5"
                                 >
                                     Add Car
@@ -49,9 +49,9 @@ const ManageInventories = () => {
                     <ManageInventory key={car._id} car={car}>
                         <button
                             onClick={() => handleDelete(car._id)}
-                            className="btn btn-danger"
+                            className="btn btn-light btn-outline-danger"
                         >
-                            X
+                            ❌
                         </button>
                     </ManageInventory>
                 ))}

@@ -39,7 +39,7 @@ const MyCars = () => {
                 <div className="mb-5">
                     <h2 className="section-title text-center my-5 fw-bold">
                         <span className="d-inline-block border-bottom border-danger border-2">
-                            YOUR ADDED CARS
+                            YOU ADDED <span className="text-danger">{myCollection.length}</span> CARS
                         </span>
                     </h2>
                     <div className="row row-cols-1 row-cols-md-3 g-4">

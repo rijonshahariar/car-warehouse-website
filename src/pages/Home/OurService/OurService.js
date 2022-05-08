@@ -18,7 +18,7 @@ const OurService = () => {
 
                 <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
                     <div className="feature col">
-                        <div className="feature-icon gradients p-2 mb-2">
+                        <div className="feature-icon p-2 mb-2">
                             <img className="d-block w-50 mx-auto" src={iconone} alt="icon" />
                         </div>
 
@@ -28,21 +28,21 @@ const OurService = () => {
 
                     </div>
                     <div className="feature col">
-                        <div className="feature-icon gradients p-2 mb-2">
+                        <div className="feature-icon p-2 mb-2">
                             <img className="d-block w-50 mx-auto" src={icontwo} alt="icon" />
                         </div>
 
-                        <h4 className='fw-bold text-center text-secondary'>Choose From Close to a Million Used Cars</h4>
-                        <p>Get access to our extensive selection of pre-owned vehicles for sale across the US, and see price ratings based on similar used car listings in your area, so you know when you’re getting a great deal.</p>
+                        <h4 className='fw-bold text-center text-secondary'>Choose From Close to a Million Cars</h4>
+                        <p>Get access to our extensive selection of pre-owned vehicles for sale across the US, and see price ratings based on similar used car listings in your area.</p>
 
 
                     </div>
                     <div className="feature col">
-                        <div className="feature-icon gradients p-2 mb-2">
+                        <div className="feature-icon p-2 mb-2">
                             <img className="d-block w-50 mx-auto" src={iconthree} alt="icon" />
 
                         </div>
-                        <h4 className='fw-bold text-center text-secondary'>Get a Trade-in Offer You Can Use Today</h4>
+                        <h4 className='fw-bold text-center text-secondary'>Get Trade-in Offer You Can Use</h4>
                         <p>Answer a few questions to see your car’s market value and get a cash offer in minutes. Cash out, or trade in for a new or used car.</p>
 
                     </div>

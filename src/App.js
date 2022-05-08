@@ -11,12 +11,16 @@ import ManageInventories from './pages/ManageInventories/ManageInventories';
 import Update from './pages/Update/Update';
 import Footer from './pages/Footer/Footer';
 import MyCars from './pages/MyCars/MyCars';
+import NotFound from './pages/NotFound/NotFound';
+import Blog from './pages/Blog/Blog';
 function App() {
   return (
     <>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+
         <Route
           path="/update/:id"
           element={
@@ -52,6 +56,7 @@ function App() {
         ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
 
 
       </Routes>
