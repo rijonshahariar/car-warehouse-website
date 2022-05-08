@@ -2,7 +2,7 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init";
 import logo from "../../images/logo.png"
 import "./Header.css"
@@ -24,28 +24,40 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/">
+                            <NavLink as={Link}
+                                className={({ isActive }) => (isActive ? "active-link" : "link")}
+                                to="/">
                                 Home
-                            </Nav.Link>
-                            <Nav.Link as={Link} to="blog">
+                            </NavLink>
+                            <NavLink as={Link}
+                                className={({ isActive }) => (isActive ? "active-link" : "link")}
+                                to="blog">
                                 Blog
-                            </Nav.Link>
+                            </NavLink>
                             {user && (
                                 <>
-                                    <Nav.Link as={Link} to="addcar">
+                                    <NavLink as={Link}
+                                        className={({ isActive }) => (isActive ? "active-link" : "link")}
+                                        to="addcar">
                                         Add Car
-                                    </Nav.Link>
-                                    <Nav.Link as={Link} to="mycar">
+                                    </NavLink>
+                                    <NavLink as={Link}
+                                        className={({ isActive }) => (isActive ? "active-link" : "link")}
+                                        to="mycar">
                                         My Cars
-                                    </Nav.Link>
-                                    <Nav.Link as={Link} to="manage">
+                                    </NavLink>
+                                    <NavLink as={Link}
+                                        className={({ isActive }) => (isActive ? "active-link" : "link")}
+                                        to="manage">
                                         Manage Cars
-                                    </Nav.Link>
+                                    </NavLink>
                                 </>
                             )}
-                            <Nav.Link as={Link} to="contact">
+                            <NavLink as={Link}
+                                className={({ isActive }) => (isActive ? "active-link" : "link")}
+                                to="contact">
                                 Contact
-                            </Nav.Link>
+                            </NavLink>
                         </Nav>
                         <Nav>
                             {user ? (
@@ -56,12 +68,16 @@ const Header = () => {
                                 </>
                             ) : (
                                 <>
-                                    <Nav.Link as={Link} to="login">
+                                    <NavLink as={Link}
+                                        className={({ isActive }) => (isActive ? "active-link" : "link")}
+                                        to="login">
                                         Login
-                                    </Nav.Link>
-                                    <Nav.Link as={Link} to="register">
+                                    </NavLink>
+                                    <NavLink as={Link}
+                                        className={({ isActive }) => (isActive ? "active-link" : "link")}
+                                        to="register">
                                         Register
-                                    </Nav.Link>
+                                    </NavLink>
                                 </>
                             )}
                         </Nav>

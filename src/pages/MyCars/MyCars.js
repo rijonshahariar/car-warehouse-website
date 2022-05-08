@@ -8,7 +8,7 @@ const MyCars = () => {
     const [user] = useAuthState(auth);
     // const [mycars, setMyCars] = useCars();
 
-    // fetch('http://localhost:5000/cars', {
+    // fetch('https://powerful-shelf-07443.herokuapp.com/cars', {
     // })
     //     .then(res => res.json())
     //     .then(data => {
@@ -21,7 +21,7 @@ const MyCars = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to delete this item?');
         if (proceed) {
-            const url = `http://localhost:5000/cars/${id}`;
+            const url = `https://powerful-shelf-07443.herokuapp.com/cars/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

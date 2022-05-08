@@ -12,7 +12,7 @@ const LastSection = () => {
                     </div>
                     <h5 className="text-center">
                         <Link
-                            className="w-50 btn managebtn"
+                            className="w-50 btn rounded-pill managebtn"
                             to="/blog"
                         >
                             VISIT BLOG

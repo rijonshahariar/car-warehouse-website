@@ -10,7 +10,7 @@ const FeaturedCar = () => {
 
     return (
         <div className="container">
-            <div className="row">
+            <div className="row justify-content-center">
                 <h1 className="section-title text-center my-5 fw-bold">
                     <span className="d-inline-block border-bottom border-primary border-2">
                         FEATURED CARS

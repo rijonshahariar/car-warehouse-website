@@ -9,7 +9,7 @@ const Articles = () => {
         <div className="container">
             <h1 className="section-title text-center my-5 fw-bold">
                 <span className="d-inline-block border-bottom border-primary border-2">
-                    RECENT BLOGS
+                    RECENT ARTICLES
                 </span>
             </h1>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 mb-5 g-3">

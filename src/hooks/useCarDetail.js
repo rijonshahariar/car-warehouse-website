@@ -4,7 +4,7 @@ const useCarDetail = id => {
     const [car, setCar] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/cars/${id}`;
+        const url = `https://powerful-shelf-07443.herokuapp.com/cars/${id}`;
         console.log(url);
         fetch(url)
             .then(res => res.json())

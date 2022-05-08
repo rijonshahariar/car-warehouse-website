@@ -13,7 +13,7 @@ const Update = () => {
     const [sold, setSold] = useState(localSoldId);
 
     useEffect(() => {
-        const url = `http://localhost:5000/cars/${id}`;
+        const url = `https://powerful-shelf-07443.herokuapp.com/cars/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setCar(data));
@@ -30,7 +30,7 @@ const Update = () => {
         const updatedQuantity = { quantity: localCarId - 1, sold: sold + 1 };
 
         // send data to the server
-        const url = `http://localhost:5000/cars/${id}`;
+        const url = `https://powerful-shelf-07443.herokuapp.com/cars/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -40,7 +40,7 @@ const Update = () => {
         })
             .then(res => res.json())
             .then(data => {
-                toast("Delivered the car successfully!");
+                toast("Successfully Delivered!");
                 e.target.reset();
             })
     }
@@ -52,7 +52,7 @@ const Update = () => {
         setNewQuantity(stockQuantity + localCarId);
         const UpdatedQuantity = { quantity: stockQuantity + localCarId, sold: sold };
         // send data to the server
-        const url = `http://localhost:5000/cars/${id}`;
+        const url = `https://powerful-shelf-07443.herokuapp.com/cars/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -166,7 +166,7 @@ const Update = () => {
                             </div>
                             <div className="col-md-2"></div>
                             <div className="col-md-5">
-                                <h2 className="text-center my-5">Re-stock your items</h2>
+                                <h2 className="text-center my-5">Re-stock Your Car</h2>
                                 {/* <img src={} alt="" /> */}
                                 <Form onSubmit={handleStockCar}>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">

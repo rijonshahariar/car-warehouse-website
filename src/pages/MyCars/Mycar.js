@@ -10,7 +10,7 @@ const MyCar = ({ myCar, children }) => {
     };
     return (
         <div className="col">
-            <div className="card h-100 border-bottom-0">
+            <div className="card h-100">
                 <div className="position-relative">
                     <img
                         src={myCar.img}

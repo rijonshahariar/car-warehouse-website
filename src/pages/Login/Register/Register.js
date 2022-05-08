@@ -93,7 +93,7 @@ const Register = () => {
                                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                     <Form.Check
                                         type="checkbox"
-                                        label="Accept all terms & condition"
+                                        label="Accept Our Terms & Conditions"
                                         onClick={() => setTerms(!terms)}
                                     />
                                 </Form.Group>

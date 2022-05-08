@@ -9,7 +9,7 @@ const AddCar = () => {
 
     const handleAddCar = (e) => {
         e.preventDefault();
-        const carObj = {
+        const carAdd = {
             name: e.target.name.value,
             supplier: e.target.supplier.value,
             email: user.email,
@@ -19,12 +19,12 @@ const AddCar = () => {
             img: e.target.image.value,
             sold: parseInt(e.target.sold.value),
         };
-        fetch('http://localhost:5000/cars', {
+        fetch('https://powerful-shelf-07443.herokuapp.com/cars', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(carObj)
+            body: JSON.stringify(carAdd)
         })
             .then(res => res.json())
             .then(data => {
