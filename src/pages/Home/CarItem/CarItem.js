@@ -7,7 +7,7 @@ const CarItem = ({ car }) => {
 
     const handleInventory = () => {
         navigate(`/update/${car._id}`);
-        localStorage.setItem(car._id, car.quantity);
+        localStorage.setItem(car._id, car.quantity, car.email);
         localStorage.setItem(`sold${car._id}`, parseInt(car.sold));
     };
     return (
@@ -39,7 +39,7 @@ const CarItem = ({ car }) => {
                 <h6 className=" mx-auto quantity p-2 text-light">
                     Quantity: {car.quantity}
                 </h6>
-                <div className="card-footer border-0 p-0">
+                <div className="card-footer border-0 px-2">
                     <button onClick={handleInventory} className="w-100 btn managebtn">
                         STOCK UPDATE
                     </button>

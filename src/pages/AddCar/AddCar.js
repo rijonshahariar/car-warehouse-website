@@ -38,7 +38,7 @@ const AddCar = () => {
             <Container>
                 <Row>
                     <div className="col-md-6 mx-auto">
-                        <h2 className="my-5">Add New Car</h2>
+                        <h2 className="my-5 text-center">Add New Car</h2>
                         <Form onSubmit={handleAddCar}>
                             <Form.Group className="mb-3" controlId="formBasicModel">
                                 <Form.Label>Car Model</Form.Label>
@@ -46,12 +46,12 @@ const AddCar = () => {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicSupplier">
-                                <Form.Label>Supplier</Form.Label>
+                                <Form.Label>Supplier Name</Form.Label>
                                 <Form.Control type="text" name="supplier" required />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Email</Form.Label>
+                                <Form.Label>Email Address</Form.Label>
                                 <Form.Control
                                     type="email"
                                     value={user.email}
@@ -76,14 +76,13 @@ const AddCar = () => {
                                 <textarea
                                     className="w-100"
                                     rows="5"
-                                    style={{ resize: "none" }}
                                     name="description"
                                     required
                                 ></textarea>
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicImage">
-                                <Form.Label>Image</Form.Label>
+                                <Form.Label>Image URL</Form.Label>
                                 <Form.Control type="text" name="image" required />
                             </Form.Group>
 
@@ -92,7 +91,7 @@ const AddCar = () => {
                                 <Form.Control type="number" name="sold" required />
                             </Form.Group>
 
-                            <Button variant="primary" type="submit" className="w-100 fw-bold mb-5">
+                            <Button type="submit" className="w-100 fw-bold managebtn mb-5">
                                 SUBMIT
                             </Button>
                         </Form>

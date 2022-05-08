@@ -1,0 +1,12 @@
+.deletebtn {
+    background-image: linear-gradient(to right, #ff3d3d, #f1855a);
+    font-weight: bold;
+    border: none;
+    color: white;
+}
+
+.deletebtn:hover {
+    color: white;
+    border: none;
+    background-image: linear-gradient(to right, #ff1717, #fd6123);
+}

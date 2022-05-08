@@ -3,7 +3,7 @@ import iconone from '../../../images/icons/iconone.svg'
 import icontwo from '../../../images/icons/icontwo.svg'
 import iconthree from '../../../images/icons/iconthree.svg'
 
-
+import './OurService.css'
 
 const OurService = () => {
     return (
@@ -18,7 +18,7 @@ const OurService = () => {
 
                 <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
                     <div className="feature col">
-                        <div className="feature-icon bg-success bg-gradient p-2 mb-2">
+                        <div className="feature-icon gradients p-2 mb-2">
                             <img className="d-block w-50 mx-auto" src={iconone} alt="icon" />
                         </div>
 
@@ -28,7 +28,7 @@ const OurService = () => {
 
                     </div>
                     <div className="feature col">
-                        <div className="feature-icon bg-primary bg-gradient p-2 mb-2">
+                        <div className="feature-icon gradients p-2 mb-2">
                             <img className="d-block w-50 mx-auto" src={icontwo} alt="icon" />
                         </div>
 
@@ -38,7 +38,7 @@ const OurService = () => {
 
                     </div>
                     <div className="feature col">
-                        <div className="feature-icon bg-danger bg-gradient p-2 mb-2">
+                        <div className="feature-icon gradients p-2 mb-2">
                             <img className="d-block w-50 mx-auto" src={iconthree} alt="icon" />
 
                         </div>
