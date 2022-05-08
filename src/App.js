@@ -13,6 +13,7 @@ import Footer from './pages/Footer/Footer';
 import MyCars from './pages/MyCars/MyCars';
 import NotFound from './pages/NotFound/NotFound';
 import Blog from './pages/Blog/Blog';
+import Contact from './pages/Contact/Contact';
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/contact" element={<Contact></Contact>}></Route>
 
         <Route
           path="/update/:id"
