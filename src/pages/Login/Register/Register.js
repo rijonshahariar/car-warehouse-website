@@ -10,6 +10,7 @@ import Loading from "../../Loading/Loading";
 import useToken from "../../../hooks/useToken";
 import "./Register.css"
 import { ToastContainer } from "react-toastify";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
     const [terms, setTerms] = useState(false);
@@ -97,7 +98,7 @@ const Register = () => {
                                     />
                                 </Form.Group>
                                 <Button
-                                    variant="primary"
+                                    className="px-5"
                                     type="submit"
                                     disabled={!terms ? true : false}
                                 >
@@ -106,8 +107,12 @@ const Register = () => {
                             </Form>
                             Already have an account?{" "}
                             <Link className="form_link" to="/login">Login</Link>
+
                         </div>
+                        <SocialLogin></SocialLogin>
+
                     </div>
+
                 </div>
                 <ToastContainer />
 

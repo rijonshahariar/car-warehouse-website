@@ -12,6 +12,7 @@ import Loading from "../../Loading/Loading";
 import useToken from '../../../hooks/useToken';
 
 import './Login.css'
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
     const [showPass, setShowPass] = useState(false);
@@ -96,6 +97,7 @@ const Login = () => {
                                 <p>Forget Password? <button className='btn-link btn pe-auto' onClick={resetPassword}>Reset Password</button> </p>
                             </div>
                         </div>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
                 <ToastContainer />
