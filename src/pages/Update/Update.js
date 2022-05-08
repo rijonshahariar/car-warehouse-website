@@ -80,7 +80,7 @@ const Update = () => {
                                 </h2>
                                 <img
                                     src={car.img}
-                                    width="450"
+                                    width="400"
                                     alt=""
                                     className="d-inline-block mx-auto"
                                 />
